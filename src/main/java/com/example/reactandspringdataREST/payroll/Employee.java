@@ -1,4 +1,4 @@
-package com.example.reactandspringdataREST;
+package com.example.reactandspringdataREST.payroll;
 
 import java.util.Objects;
 import javax.persistence.Entity;

@@ -1,4 +1,4 @@
-package com.example.reactandspringdataREST;
+package com.example.reactandspringdataREST.payroll;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
