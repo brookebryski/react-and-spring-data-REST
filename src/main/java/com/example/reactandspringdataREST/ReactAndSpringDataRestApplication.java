@@ -3,6 +3,8 @@ package com.example.reactandspringdataREST;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+// https://spring.io/guides/tutorials/react-and-spring-data-rest/
+
 @SpringBootApplication
 public class ReactAndSpringDataRestApplication {
 
@@ -11,3 +13,5 @@ public class ReactAndSpringDataRestApplication {
 	}
 
 }
+// localhost:8080/api
+// localhost:8080/api/employees
