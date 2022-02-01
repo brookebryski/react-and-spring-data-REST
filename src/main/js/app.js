@@ -4,6 +4,8 @@ const React = require('react');
 const ReactDOM = require('react-dom');
 const client = require('./client');
 
+var root = '/api';
+
 // App
 class App extends React.Component {
 
@@ -12,10 +14,30 @@ class App extends React.Component {
 		this.state = {employees: []};
 	}
 
+	loadFromServer(pageSize) {
+    	follow(client, root, [
+    		{rel: 'employees', params: {size: pageSize}}]
+    	).then(employeeCollection => {
+    		return client({
+    			method: 'GET',
+    			path: employeeCollection.entity._links.profile.href,
+    			headers: {'Accept': 'application/schema+json'}
+    		}).then(schema => {
+    			this.schema = schema.entity;
+    			return employeeCollection;
+    		});
+    	}).done(employeeCollection => {
+    		this.setState({
+    			employees: employeeCollection.entity._embedded.employees,
+    			attributes: Object.keys(this.schema.properties),
+    			pageSize: pageSize,
+    			links: employeeCollection.entity._links});
+    	});
+    }
+
 	componentDidMount() {
-		client({method: 'GET', path: '/api/employees'}).done(response => {
-			this.setState({employees: response.entity._embedded.employees});
-		});
+    	this.loadFromServer(this.state.pageSize);
+        }
 	}
 
 	render() {
