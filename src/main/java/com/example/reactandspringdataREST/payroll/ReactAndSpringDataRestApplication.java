@@ -15,3 +15,15 @@ public class ReactAndSpringDataRestApplication {
 }
 // localhost:8080/api
 // localhost:8080/api/employees
+
+// Part 1 Review:
+//
+//In this section:
+//
+//You defined a domain object and a corresponding repository.
+//
+//You let Spring Data REST export it with full-blown hypermedia controls.
+//
+//You created two simple React components in a parent-child relationship.
+//
+//You fetched server data and rendered them in as a simple, static HTML structure.
