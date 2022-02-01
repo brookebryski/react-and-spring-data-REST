@@ -27,3 +27,14 @@ public class ReactAndSpringDataRestApplication {
 //You created two simple React components in a parent-child relationship.
 //
 //You fetched server data and rendered them in as a simple, static HTML structure.
+
+// Part 2:
+//	    GET: Fetches the state of a resource without altering the system
+//
+//		POST: Creates a new resource without saying where
+//
+//		PUT: Replaces an existing resource, overwriting whatever else (if anything) is already there
+//
+//		DELETE: Removes an existing resource
+//
+//		PATCH: Alters an existing resource (partially rather than creating a new resource)
