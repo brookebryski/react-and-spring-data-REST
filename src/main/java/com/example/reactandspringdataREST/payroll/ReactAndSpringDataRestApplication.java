@@ -38,3 +38,17 @@ public class ReactAndSpringDataRestApplication {
 //		DELETE: Removes an existing resource
 //
 //		PATCH: Alters an existing resource (partially rather than creating a new resource)
+
+// Part 2 Review:
+
+//In this section:
+//
+//	You turned on Spring Data REST’s paging feature.
+//
+//	You threw out hardcoded URI paths and started using the root URI combined with relationship names or “rels”.
+//
+//	You updated the UI to dynamically use page-based hypermedia controls.
+//
+//	You added the ability to create & delete employees and update the UI as needed.
+//
+//	You made it possible to change the page size and have the UI flexibly respond.
